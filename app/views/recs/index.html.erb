@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Time</th>
+      <th>Tip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recs.each do |rec| %>
+      <tr>
+        <td><%= rec.value %></td>
+        <td><%= rec.time %></td>
+        <td><%= rec.tip %></td>
+        <td><%= link_to 'Show', rec %></td>
+        <td><%= link_to 'Edit', edit_rec_path(rec) %></td>
+        <td><%= link_to 'Destroy', rec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rec', new_rec_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @rec.value %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @rec.time %>
+</p>
+
+<p>
+  <strong>Tip:</strong>
+  <%= @rec.tip %>
+</p>
+
+<%= link_to 'Edit', edit_rec_path(@rec) %> |
+<%= link_to 'Back', recs_path %>
